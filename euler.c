@@ -42,13 +42,13 @@ int problem3(){
 	//idk why but long wouldn't work for me()
 	//blame this error: overflow in implicit constant conversion [-Woverflow]
 	//consequently i needed the function fmod from <math.h> to help mod the numbers
-	double number = 600851475143;
+	long number = 600851475143;
 	int factor = 2;
 	int biggest = 1;
 	//keep dividing until it's 1
 	while (number != 1){
 		//check if the factor can divide the number
-		if(fmod(number, factor) == 0){
+		if(number % factor == 0){
 			//printf("%d / %d\n", number, factor);
 			//check if biggest is the biggest factor so far
 			if(biggest < factor){
